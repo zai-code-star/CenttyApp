@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Centty User</string>
+    <string name="default_web_client_id">AIzaSyBvxDKNCsypdhjmcnjnnV7UpXSUFT3tRog</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tips_content">Untuk memilih properti yang tepat, pertimbangkanlah beberapa hal berikut:\n\n
+        1. Tentukan Tujuan Anda: Apakah Anda ingin membeli properti untuk tempat tinggal, investasi, atau tujuan komersial?\n\n
+        2. Tentukan Lokasi yang Dicari: Pilihlah lokasi yang sesuai dengan kebutuhan Anda, seperti akses transportasi, fasilitas umum, dan lingkungan sekitar.\n\n
+        3. Tentukan Budget: Tetapkanlah budget yang realistis sesuai dengan kemampuan finansial Anda.\n\n
+        4. Perhatikan Kondisi Properti: Periksa dengan teliti kondisi properti termasuk struktur bangunan, fasilitas, dan legalitasnya.\n\n
+        5. Konsultasikan dengan Ahli Properti: Jika perlu, konsultasikan dengan agen properti atau ahli properti lainnya untuk mendapatkan saran yang lebih baik.\n\n
+        6. Tinjau Kembali Keputusan Anda: Sebelum membuat keputusan akhir, pertimbangkan kembali semua faktor dan pastikan properti yang dipilih memenuhi semua kriteria yang Anda inginkan.</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="huruf">#122D4D</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#22B897</color>
+    <color name="blue">#006EFF</color>
+    <color name="beground">#F9FBFF</color>
+    <color name="abutulisan">#8C8C8C</color>
+    <color name="colorBottomNavBackground">@color/white</color> <!-- Ubah warna sesuai dengan preferensi Anda -->
+
+</resources>

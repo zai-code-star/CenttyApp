@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.listing.EditActivity">
+
+    <EditText
+        android:id="@+id/editTextItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name" />
+
+    <EditText
+        android:id="@+id/editTextItemPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Price"
+        android:inputType="numberDecimal" />
+
+     <EditText
+        android:id="@+id/alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item alamat" />
+
+    <EditText
+        android:id="@+id/spesifikasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item spek" />
+
+    <!-- Tambahkan EditText lainnya sesuai kebutuhan -->
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update" />
+
+</LinearLayout>

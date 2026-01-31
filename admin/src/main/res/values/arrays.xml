@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="filter_options">
+        <item>Semua</item>
+        <item>Rumah</item>
+        <item>Tanah</item>
+        <item>Ruko</item>
+        <!-- Tambahkan opsi filter lainnya sesuai kebutuhan -->
+    </string-array>
+</resources>

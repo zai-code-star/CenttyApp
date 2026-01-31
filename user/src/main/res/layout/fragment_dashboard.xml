@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Banner Box -->
+    <RelativeLayout
+        android:id="@+id/bannerBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/beground"
+        android:visibility="gone">
+
+        <!-- Isi banner box di sini -->
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bannerawal" />
+
+        <!-- Close Banner -->
+        <ImageView
+            android:id="@+id/closeBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/silang" />
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@android:color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- Profile CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_below="@id/bannerBox"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <!-- Profile User -->
+        <RelativeLayout
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="12dp">
+
+            <!-- Gambar Profil -->
+            <com.google.android.material.imageview.ShapeableImageView
+                app:shapeAppearanceOverlay="@style/RoundedImageView"
+                android:id="@+id/profileImage"
+                android:layout_width="33dp"
+                android:layout_height="38dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/userprofile" />
+
+            <!-- Nama User -->
+            <TextView
+                android:id="@+id/hallo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/profileImage"
+                android:text="hallo"
+                android:textColor="@color/blue"
+                android:textSize="12sp" />
+
+  <!-- Nama User -->
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hallo"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/profileImage"
+                android:text="Nama user"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Icon Notifikasi -->
+            <ImageView
+                android:id="@+id/notificationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/notifikasi" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Selamat Datang -->
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileCardView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:text="Selamat datang di"
+        android:textColor="@android:color/black"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/catalogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeMessage"
+        android:layout_alignStart="@+id/welcomeMessage"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
+        android:text="Katalog Central Properti"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <!-- Banner Slider -->
+    <RelativeLayout
+        android:id="@+id/bannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/catalogMessage"
+        android:layout_marginTop="10dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+    </RelativeLayout>
+
+    <!-- NestedScrollView for Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/texttipsandtrik"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="80dp">
+
+            <!-- CardView untuk Tab 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <!-- Filter Tabs -->
+                <LinearLayout
+                    android:id="@+id/filterTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <!-- Tambahkan Tab untuk Setiap Filter -->
+                    <TextView
+                        android:id="@+id/tabBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_rounded_corner"
+                        android:gravity="center"
+                        android:text="Baru"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tabRumah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_rounded_corner"
+                        android:gravity="center"
+                        android:text="Rumah"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tabRuko"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_rounded_corner"
+                        android:gravity="center"
+                        android:text="Ruko"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tabTanah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_rounded_corner"
+                        android:gravity="center"
+                        android:text="Tanah"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <!-- RecyclerView untuk Menampilkan Item Filter 1 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="50dp"
+                    android:scrollbars="vertical" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CardView untuk Tab 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardView1"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <!-- Filter Tabs 2 -->
+                <LinearLayout
+                    android:id="@+id/filterTabs2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <!-- Tambahkan Tab untuk Setiap Filter -->
+                    <TextView
+                        android:id="@+id/tabPurwokertoBarat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_rounded_corner"
+                        android:gravity="center"
+                        android:text="Pwt Barat"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tabPurwokertoUtara"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_rounded_corner"
+                        android:gravity="center"
+                        android:text="Pwt Utara"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tabPurwokertoTimur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_rounded_corner"
+                        android:gravity="center"
+                        android:text="Pwt Timur"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tabPurwokertoSelatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_rounded_corner"
+                        android:gravity="center"
+                        android:text="Pwt Selatan"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <!-- RecyclerView untuk Menampilkan Item Filter 2 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="50dp"
+                    android:scrollbars="horizontal|vertical" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- CardView for Property Tax Calculator -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewPropertyTaxCalculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardView2"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="4dp">
+
+                <!-- Property Tax Calculator Content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title -->
+                    <TextView
+                        android:id="@+id/textViewPropertyTaxCalculatorTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="Hitung Pajak Properti"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!-- Property Value -->
+                    <EditText
+                        android:id="@+id/editTextPropertyValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/abutulisan"
+                        android:hint="Masukan harga properti"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textSize="13sp" />
+
+                    <!-- Tax Rate -->
+                    <EditText
+                        android:id="@+id/editTextTaxRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/abutulisan"
+                        android:hint="Masukan pajak (%)"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp"
+                        android:textSize="13sp" />
+
+                    <!-- Calculate Button -->
+                    <Button
+                        android:id="@+id/buttonCalculate"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/rounded_corner_background"
+                        android:padding="5dp"
+                        android:text="Hitung"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <!-- Result TextView -->
+                    <TextView
+                        android:id="@+id/textViewResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hasil"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Search Box -->
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="297dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/catalogMessage"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/search_background"
+        android:elevation="8dp"
+        android:padding="16dp">
+
+        <!-- Kotak Pencarian -->
+        <EditText
+            android:id="@+id/searchBox"
+            android:layout_width="234dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="40dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="Temukan properti yang anda cari"
+            android:textSize="12sp" />
+
+        <!-- Tombol Cari -->
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+
+    <!-- ImageButton for Tips and Tricks -->
+    <ImageButton
+        android:id="@+id/tipsAndTricksButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/searchLayout"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/circle_background"
+        android:elevation="8dp"
+        android:src="@drawable/tips" />
+
+    <!-- Text for Tips and Tricks -->
+    <TextView
+        android:id="@+id/texttipsandtrik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tipsAndTricksButton"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="4dp"
+        android:text="Tips"
+        android:textColor="@color/abutulisan"
+        android:textSize="12sp" />
+
+    <!-- Button for Transaction Flow -->
+    <ImageButton
+        android:id="@+id/buttonalurpembelian"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/tipsAndTricksButton"
+        android:layout_toEndOf="@id/tipsAndTricksButton"
+        android:background="@drawable/circle_background"
+        android:layout_marginLeft="13dp"
+        android:elevation="8dp"
+        android:src="@drawable/flowbeli" />
+
+    <!-- Text for Transaction Flow -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonalurpembelian"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/tipsAndTricksButton"
+        android:text="Alur Beli"
+        android:textColor="@color/abutulisan"
+        android:textSize="12sp" />  <!-- Button for Transaction Flow -->
+
+    <ImageButton
+        android:id="@+id/buttonalursewa"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/buttonalurpembelian"
+        android:layout_toEndOf="@id/buttonalurpembelian"
+        android:background="@drawable/circle_background"
+        android:layout_marginLeft="13dp"
+        android:elevation="8dp"
+        android:src="@drawable/flowsewa" />
+
+    <!-- Text for Transaction Flow -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonalursewa"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/buttonalurpembelian"
+        android:text="Alur Sewa"
+        android:textColor="@color/abutulisan"
+        android:textSize="12sp" />
+</RelativeLayout>

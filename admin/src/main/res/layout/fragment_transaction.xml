@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/beground"
+    tools:context=".ui.transaction.TransactionFragment">
+
+    <!-- Semi-transparent overlay -->
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+    android:visibility="gone"/>
+
+
+
+    <!-- Bottom Sheet -->
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_corner_top"
+        android:padding="16dp"
+        android:elevation="8dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <!-- Tampilan untuk isi bottom sheet -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:background="@color/abutulisan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catat Transaksi"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tab Layout -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/blue"
+            app:tabSelectedTextColor="@color/blue"
+            app:tabTextColor="@color/black"
+            android:visibility="visible"/>
+
+        <!-- Input Fields -->
+        <LinearLayout
+            android:id="@+id/input_fields_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Input for Terjual -->
+            <EditText
+                android:id="@+id/editTextPropertiTerjual"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="Nama Properti Terjual" />
+
+            <EditText
+                android:id="@+id/editTextHargaTerjual"
+                android:layout_width="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="Harga Properti Terjual"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/editPemilikProperti"
+                android:layout_width="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="Nama Pemilik Properti" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_tanggalterjual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Terjual">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_date_terjual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Input for Tersewa -->
+            <EditText
+                android:id="@+id/editTextPropertiTersewa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:hint="Nama Properti Tersewa"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editTextBiayaSewa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Biaya Sewa"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:id="@+id/editTextNamaPenyewa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textSize="15sp"
+                android:hint="Nama Penyewa"
+                android:visibility="gone" />
+
+        <EditText
+                android:id="@+id/editPemilikPropertiSewa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textSize="15sp"
+                android:hint="Pemilik Properti Sewa"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_tanggalsewa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Mulai Sewa">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_edit_tanggalsewa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:visibility="gone"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_layout_tanggalselesai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:hint="Tanggal Selesai Sewa">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_edit_tanggalselesai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:visibility="gone"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_simpan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simpan"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="visible"/>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="12dp"
+        android:layout_above="@id/fab_add">
+
+        <!-- RecyclerView to display the list of items -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="570dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="10dp"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/textViewTotalHarga"
+            android:layout_width="278dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/recyclerView"
+            android:textSize="14sp"
+            android:text=""
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <!-- Content Container -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            android:paddingTop="12dp">
+
+            <!-- Content inside your CardView -->
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Button for Update Item -->
+                <Button
+                    android:id="@+id/Terjual"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="Terjual" />
+
+                <!-- Button for Delete Item -->
+                <Button
+                    android:id="@+id/Sedangdisewa"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:text="Sedang diSewa" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="120dp"
+            android:src="@drawable/plus" />
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

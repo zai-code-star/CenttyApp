@@ -1,0 +1,123 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/beground"> <!-- Memberikan warna abu untuk latar belakang -->
+
+        <!-- Search Box -->
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:layout_gravity="center"
+            android:background="@drawable/search_background"
+            android:elevation="8dp"
+            android:padding="16dp">
+
+            <!-- Kotak Pencarian -->
+            <EditText
+                android:id="@+id/searchBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_toStartOf="@+id/searchButton"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Temukan properti yang anda cari"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textSize="14sp" />
+
+            <!-- Tombol Cari -->
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:padding="12dp"
+                android:src="@drawable/search" />
+
+        </RelativeLayout>
+
+        <!-- Button Jual dan Sewa -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="26dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="26dp"
+            android:paddingBottom="8dp"> <!-- Memberikan warna putih untuk latar belakang -->
+
+            <Button
+                android:id="@+id/btnJual"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:radius="4dp"
+                android:text="Jual"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnSewa"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:radius="4dp"
+                android:text="Sewa"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:layout_marginTop="190dp"
+            android:indeterminateTint="@color/blue"
+            android:indeterminateTintMode="src_atop"/>
+
+        <!-- NestedScrollView untuk konten yang dapat digulirkan -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="80dp">
+
+            <!-- RecyclerView untuk menampilkan daftar -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewListing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:padding="8dp"
+                android:scrollbars="vertical" />
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

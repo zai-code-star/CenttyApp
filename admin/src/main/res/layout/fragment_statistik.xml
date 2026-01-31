@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Header for CardView 1 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Statistik"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_columnSpan="2"/>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:padding="16dp"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:rowOrderPreserved="false"
+            android:background="@color/beground"
+            tools:context=".ui.statistik.StatistikFragment">
+
+            <!-- CardView 1 -->
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/shimmerLayout1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@color/blue"
+                android:layout_margin="8dp"
+                android:padding="16dp">
+
+                <!-- Your CardView content here -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Your CardView content here -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dijual"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <!-- CardView 2 -->
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/shimmerLayout2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@color/blue"
+                android:padding="16dp">
+
+                <!-- Your CardView content here -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Your CardView content here -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Disewa"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <!-- CardView 3 -->
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/shimmerLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@color/blue"
+                android:padding="16dp">
+
+                <!-- Your CardView content here -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Your CardView content here -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Rumah"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="200"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <!-- CardView 4 -->
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/shimmerLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@color/blue"
+                android:padding="16dp">
+
+                <!-- Your CardView content here -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Your CardView content here -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ruko"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="80"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <!-- CardView 5 -->
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/shimmerLayout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@color/blue"
+                android:padding="16dp">
+
+                <!-- Your CardView content here -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Your CardView content here -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanah"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="150"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <!-- CardView 6 -->
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/shimmerLayout6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@color/blue"
+                android:padding="16dp">
+
+
+                <!-- Your CardView content here -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Your CardView content here -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hotel"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <!-- CardView 7 -->
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/shimmerLayout7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@color/blue"
+                android:padding="16dp">
+
+                <!-- Your CardView content here -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Your CardView content here -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kost"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                        <!-- Your CardView content here -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:layout_gravity="center_horizontal"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>

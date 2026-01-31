@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!-- Foto Profil -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_pakheru" />
+
+        <!-- Nama Agen -->
+        <TextView
+            android:id="@+id/agent_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Pak Heru Kuswoyo"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- Informasi Kontak -->
+        <LinearLayout
+            android:id="@+id/contact_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/agent_name"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/contact_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Kontak:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contact_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginLeft="7dp"
+                android:text="082227013111"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Deskripsi Profil Agen -->
+        <TextView
+            android:id="@+id/profile_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_info_layout"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Deskripsi Profil Agen yang Menarik dan Profesional. Tuliskan deskripsi tentang profil agen di sini."
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <!-- Tombol Hubungi -->
+        <Button
+            android:id="@+id/contact_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Hubungi"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:elevation="4dp" />
+
+        <!-- Label Testimoni/Rating -->
+        <TextView
+            android:id="@+id/text_testimony_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Testimoni/Rating"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- RecyclerView untuk Testimoni -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTestimony"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_testimony_rating"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+</ScrollView>

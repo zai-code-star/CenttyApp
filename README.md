@@ -9,16 +9,9 @@ CenttyApp membantu pengguna menemukan properti yang sesuai sekaligus mempermudah
 
 ## 🖼️ Tampilan Aplikasi
 
-### Preview Blog Centty Apps
+### Preview Centty Apps
 <p align="center">
   <img src="assets/screenshots/Preview Blog Centty Apps.png" width="100%"/>
-</p>
-
----
-
-### Thumbnail Centty Apps
-<p align="center">
-  <img src="assets/screenshots/Thumbnail Centty Apps.png" width="100%"/>
 </p>
 
 ---
